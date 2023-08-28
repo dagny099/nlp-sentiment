@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# Project-specific files
+*.ipynb
+*.ipynb_checkpoints
+*.log
+
+
+# Data and large files (customize as needed)
+cache/
+data/
+#*.csv
+*.xlsx
+*.json
+
+
+# secrets
+.secrets
+.streamlit/secrets.toml
+
+
+# Virtual environment (if you use virtualenv or venv)
+.env*
+.venv*
+
+# macOS Finder files
+*.DS_Store
+
+
+# IDE settings (customize as needed, this is for VSCode)
+.vscode/
+
+

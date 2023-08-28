@@ -1,0 +1,15 @@
+streamlit
+textblob
+tqdm
+nltk
+spacy
+pandas
+vaderSentiment
+plotly
+seaborn
+scipy
+streamlit-keyup
+Boto3
+s3fs==2023.6.0
+pyarrow
+git+https://github.com/streamlit/files-connection
