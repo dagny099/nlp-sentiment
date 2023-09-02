@@ -42,6 +42,7 @@ def main():
     print(f'\n3- Merging reviews-data with metadata ...')
     review_counts = reviewsDF.groupby('asin').size().reset_index(name='num_reviews')
     metaDF = metaDF.merge(review_counts, on='asin', how='left').fillna(0)
+    # Drop products without reviews and sort by num_reviews ????
 
     print(f'\n4- Saving metadata file with review counts: {SAVE_MERGED}')
     metaDF.to_parquet(SAVE_MERGED, engine = 'pyarrow', compression = 'gzip')

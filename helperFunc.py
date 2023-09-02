@@ -9,6 +9,14 @@ import toml
 creds = toml.load(".streamlit/secrets.toml")
 bucketName = "product-data-dagny099"
 
+overviewDF = pd.DataFrame({
+    'Product Category':['Books','Movies and TV','Kindle Store','Video Games','Digital Music','Software'],
+    'Num_Reviews': [27164983, 3410019, 2222983, 497577, 169781, 12805],
+    'Num_Products': [2930024, 181839, 491670, 71911, 66013, 21639],
+    'Num_Products_Reviewed': [704093, 60175, 98824, 17408, 11797, 802],
+    'Example_Product_Title': ["Wool - Omnibus Edition", "Gattaca", "Red Rising", "Fallout 4 - PlayStation 4", "Back to Black", "NORTON"]
+})
+
 # -----------------------------------------------------
 # Load the gzip dataset downloaded
 def load_product_data(file, keepUs):
@@ -21,8 +29,6 @@ def load_product_data(file, keepUs):
             data_list.append({key: json_obj[key] for key in keepUs if key in json_obj})  ## ***
     print('Done')
     return pd.DataFrame(data_list)
-
-
 
 # -----------------------------------------------------
 # Create continuous data
